@@ -21,13 +21,21 @@ void setup()
 }
 
 // the loop function runs over and over again forever
+  // int dt = 100;                   /* 10 Hz */
+int dt = 10;                       /* 100 Hz */
+// int dt = 1;                     /* 1000 Hz */
 int i = 0;
-void loop() {
-  int dt = 50;
-  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level) */
-  delay(dt);                         // wait for dt ms */
-  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW */
-  delay(dt);                         // wait for dt ms */
+void loop() 
+{
+  delay(dt);                            // wait for dt ms */
+  if(i % 2 == 0)
+  {
+    digitalWrite(LED_BUILTIN, HIGH);
+  }
+  else
+  {
+    digitalWrite(LED_BUILTIN, LOW);
+  }
 
   Serial.print('<');                 /* begin data */
   Serial.print(i);                   /* data */
