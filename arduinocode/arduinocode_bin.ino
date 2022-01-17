@@ -21,9 +21,9 @@ void setup()
 }
 
 // the loop function runs over and over again forever
-// int dt = 100;                   /* 10 Hz */
-// int dt = 10;                       /* 100 Hz */
-int dt = 1;                     /* 1000 Hz */
+  // int dt = 100;                   /* 10 Hz */
+int dt = 10;                       /* 100 Hz */
+// int dt = 1;                     /* 1000 Hz */
 int i = 0;
 void loop() 
 {
@@ -37,15 +37,15 @@ void loop()
     digitalWrite(LED_BUILTIN, LOW);
   }
 
-  Serial.print('<');           /* begin data */
-  Serial.print(i);             /* data */
-  Serial.print(',');           /* data */
-  Serial.print(millis());      /* dt in millisec since prgm started */
-  Serial.print(',');           /* data */
-  Serial.print(random());      /* data */
-  Serial.print(',');           /* data */
-  Serial.print(random());      /* data */
-  Serial.print('>');           /* end data */
-  Serial.print('\n');          /* data */
-  i++;                         /* increment i */ 
+  Serial.print('<');                 /* begin data */
+  Serial.print(i);                   /* data */
+  Serial.print(',');                 /* data */
+  Serial.print(millis());
+  Serial.print(',');                 /* data */
+  Serial.print(random());            /* data */
+  Serial.print(',');                 /* data */
+  Serial.print(random());               /* data */
+  Serial.print('>');                 /* end data */
+  Serial.print('\n');                /* data */
+  i++;                               /* increment i */ 
 }
