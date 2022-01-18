@@ -16,18 +16,22 @@ void setup()
 {
   // initialize digital pin LED_BUILTIN as an output.
   pinMode(LED_BUILTIN, OUTPUT);
-  Serial.begin(9600);
+  // Serial.begin(9600);
+  // Serial.begin(19200);
+  // Serial.begin(38400);
+  // Serial.begin(57600);
+  Serial.begin(115200);
   randomSeed(analogRead(0));
 }
 
 // the loop function runs over and over again forever
 // int dt = 100;                   /* 10 Hz */
-// int dt = 10;                       /* 100 Hz */
-int dt = 1;                     /* 1000 Hz */
-int i = 0;
+// int dt = 10;                    /* 100 Hz */
+int dt = 1;                        /* 1000 Hz */
+int i  = 0;
 void loop() 
 {
-  delay(dt);                            // wait for dt ms */
+  // delay(dt);                            // wait for dt ms */
   if(i % 2 == 0)
   {
     digitalWrite(LED_BUILTIN, HIGH);
@@ -37,7 +41,6 @@ void loop()
     digitalWrite(LED_BUILTIN, LOW);
   }
 
-  Serial.print('<');           /* begin data */
   Serial.print(i);             /* data */
   Serial.print(',');           /* data */
   Serial.print(millis());      /* dt in millisec since prgm started */
@@ -45,7 +48,6 @@ void loop()
   Serial.print(random());      /* data */
   Serial.print(',');           /* data */
   Serial.print(random());      /* data */
-  Serial.print('>');           /* end data */
   Serial.print('\n');          /* data */
   i++;                         /* increment i */ 
 }
